@@ -1,0 +1,17 @@
+// app/(main)/layout.tsx
+
+import React from "react";
+import { Navbar, ThemeProvider } from "@/components";
+
+export default function HomeRootLayout({ children, }: { children: React.ReactNode }) {
+  return (
+    <ThemeProvider>
+      <div className={`h-dvh sm:min-h-screen flex flex-col bg-background text-foreground`}>
+        <Navbar />
+        <main className="w-[95%] xl:max-w-[90%] 4xl:max-w-[1800px]! mx-auto flex flex-col flex-1 mb-0.5 pt-18 sm:pt-18 bg-yellow-60 px-4 sm:px-7">
+          {children}
+        </main>
+      </div>
+    </ThemeProvider>
+  );
+}
